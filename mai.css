@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing:border-box;
+    font-family: "Poppins", sans-serif;
+  }
+
+body{
+    margin: 0;
+    padding: 0;
+
+}
+
+.zoom{
+    width: 100%;
+    height: 1000px;
+    position: relative;
+    overflow: hidden;
+    background: url(images/bg.jpg);
+    background-size: 1600px;
+}
+
+.zoom:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    z-index: 1000;
+    background: linear-gradient(transparent, #fff);
+}
+
+.zoom #layer1{
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+
+}
+.zoom #layer2{
+    position: absolute;
+    width: 100%;
+    right: 0;
+    z-index: 9;
+}
+.zoom #text{
+    position: absolute;
+    right: 0;
+    width: 100%;
+    transform: translateY(50%);
+
+}
+
+.direct{
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:linear-gradient(to bottom, #fff 0% ,#728997 50%, #0d2044 100%);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    
+    grid-template-rows: auto;
+}
+
+.container{
+    position: relative;
+    width: 65%;
+}
+
+.container .box{
+    position: relative;
+    height: 400px;
+    width: 400px;
+    background: #060c21;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000; 
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px #000;
+}
+.container .box::before{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    transform: skew(2deg,2deg);
+    z-index: -1;
+
+}
+.content{
+    position: relative;
+    padding: 20px;   
+}
+.content h2{
+    
+    color: rgba(255,255,255,0.7);
+    font-weight: 600; 
+    letter-spacing: 1px;
+}
+
+.box .content p{
+    color: rgba(255,255,255,0.7);
+    font-weight: 600; 
+   }
+ 
+.box .content a{
+    position: relative;
+    margin: 20px 0 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 1px solid #fff;
+    display: inline-block;
+    color: #fff;
+    transition: 0.5s;
+    transform: translateY(-40px);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.box:hover .content a{
+    transform: translateY(0px);
+    opacity: 1;
+    visibility: visible;
+}
+.box .content a:hover{
+    color: #000;
+    background: #fff;
+}

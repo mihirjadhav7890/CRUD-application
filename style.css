@@ -1,0 +1,283 @@
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+
+  .body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing:border-box;
+    
+  }
+.bg{
+  background-image: url(images/B3.jpg);
+  background-size: cover;
+  
+}
+
+
+.error{
+    color: grey;
+    padding: 1px;
+    margin: 2px;
+}
+
+body,
+input {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  background: transparent;
+  min-height: 95vh;
+  overflow: hidden;
+}
+
+.forms-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.signin-signup {
+  position: absolute;
+  top: 48%;
+  transform: translate(-50%, -50%);
+  left: 75%;
+  width: 50%;
+  transition: 1s 0.7s ease-in-out;
+  display: grid;
+  grid-template-columns: 1fr;
+  z-index: 5;
+  
+  
+}
+
+.signin-signup2{
+    position: absolute;
+    top: 48%;
+    transform: translate(-50%, -50%);
+    left: 25%;
+    width: 50%;
+    transition: 1s 0.7s ease-in-out;
+    display: grid;
+    grid-template-columns: 1fr;
+    z-index: 5;
+    border-radius: 5%;
+    
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0rem 5rem;
+  transition: all 0.2s 0.7s;
+  overflow: hidden;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+form.sign-up-form {
+  opacity: 0;
+  z-index: 1;
+}
+
+form.sign-in-form {
+  z-index: 2;
+}
+
+.title1 {
+  font-size: 3.2rem;
+  color: rgb(68, 98, 199);
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.title2 {
+    font-size: 2.1rem;
+    color: #444;
+    margin-bottom: 10px;
+    display: flex;
+justify-content: center;
+  }
+
+.input-field {
+  max-width: 380px;
+  width: 100%;
+  background-color: rgb(226 222 222);
+  margin: 12px 0;
+  height: 55px;
+  border-radius: 55px;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  padding: 0 0.5rem;
+  position: relative;
+}
+
+
+.input-field i {
+  text-align: center;
+  line-height: 55px;
+  color: #acacac;
+  transition: 0.5s;
+  font-size: 1.1rem;
+}
+
+.input-field input {
+  background: none;
+  outline: none;
+  border: none;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.input-field input::placeholder {
+  color: #aaa;
+  font-weight: 500;
+}
+
+.btn {
+    width: 150px;
+    background-color: #5995fd;
+    border: none;
+    outline: none;
+    height: 49px;
+    border-radius: 49px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  .btn:hover {
+    background-color: #4d84e2;
+  }
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  @media (max-width: 870px) {
+    .container {
+      min-height: 800px;
+      height: 100vh;
+    }
+    .signin-signup  {
+      width: 100%;
+      top: 45%;
+    transform: translate(-70%, -70%);
+      transition: 1s 0.8s ease-in-out;
+
+    }
+    .signin-signup2
+    {
+      width: 100vh;
+      top: 120%;
+      transform: translate(-25%, -80%);
+      transition: 1s 0.8s ease-in-out;
+
+    }
+    
+  
+   
+  
+    
+    .btn.transparent {
+      width: 110px;
+      height: 35px;
+      font-size: 0.7rem;
+    }
+  
+    .container:before {
+      width: 1500px;
+      height: 1500px;
+      transform: translateX(-50%);
+      left: 30%;
+      bottom: 68%;
+      right: initial;
+      top: initial;
+      transition: 2s ease-in-out;
+    }
+  
+    .container.sign-up-mode:before {
+      transform: translate(-50%, 100%);
+      bottom: 32%;
+      right: initial;
+    }
+  
+    .container.sign-up-mode .container.sign-up-mode  {
+      transform: translateY(-300px);
+    }
+  
+    .container.sign-up-mode 
+    .container.sign-up-mode {
+      transform: translateY(0px);
+    }
+  
+    
+    .container.signin-signup2 .signin-signup {
+      top: 5%;
+      transform: translate(-50%, 0);
+    }
+  }
+  
+  @media (max-width: 570px) {
+    form {
+      padding: 0 1.5rem;
+    }
+  
+  
+    .container {
+      padding: 1.5rem;
+    }
+  
+    .container:before {
+      bottom: 72%;
+      left: 50%;
+    }
+  
+    .container.sign-up-mode:before {
+      bottom: 28%;
+      left: 50%;
+    }
+  
+
+  }
